@@ -7,10 +7,15 @@ function update_fact() {
 		"每個奇數的英文中都有一個\'e\'。",
 		"少一條腿，你的BMI會降低；但少兩條腿，你的BMI會暴增。",
 		"每個人都踢過孕婦。",
-		"冰箱是櫃子、冰櫃是箱子。"
+		"冰箱是櫃子、冰櫃是箱子。",
+		"「拿去」的英文和台語唸起來一樣。"
 	];
 	var str = arr[getRandom(0, arr.length)];
 	var ele = document.getElementById("fun_fact");
 	ele.innerHTML += str;
 }
 update_fact()
+
+function func() {
+	return "AAA";
+}

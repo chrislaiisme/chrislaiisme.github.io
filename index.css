@@ -1,20 +1,10 @@
+html, body {
+	height: 95%;
+}
 body {
 	font-family: Consolas, Microsoft JhengHei;
-	color: #333333;
-	display: flex;
-	flex-direction: row;
-}
-left {width: 15%;}
-main {
-	width: 70%;
 	display: flex;
 	flex-direction: column;
-}
-right {width: 15%;}
-a:link, a:visited, a:hover, a:active {
-  color: #333333;
-  background-color: transparent;
-  text-decoration: none;
 }
 banner {
 	height: 100px;
@@ -22,10 +12,29 @@ banner {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0vw 2vw 0vw 2vw;
+}
+banner left {
+	color: #646464;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 16px;
+}
+#fun_fact {
+	color: #646464;
+	width: 20%;
+	font-size: 18px;
+}
+a:link, a:visited, a:hover, a:active {
+	color: #646464;
+  background-color: transparent;
+  text-decoration: none;
 }
 links {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 }
 links input {
 	margin-right: 15px;
@@ -33,19 +42,41 @@ links input {
 	font-family: Consolas, Microsoft JhengHei;
 	font-size: 18px;
 	background-color: transparent;
-	border: 2px solid transparent;
+	border: 0px transparent;
+	border-bottom: 2px solid transparent;
 	transition-duration: 0.2s;
+	color: #969696;
 }
 links input:hover {
-	border-bottom: 2px solid #c8c8c8;
+	border-bottom: 2px solid #969696;
 }
 hr {
-  border: 0px;
-	height: 1px;
-  width: 100%;
+  border: 0;
+  display: block;
+  width: 100%;    
   background-color: #c8c8c8;
+  height: 1px;
 }
-#fun_fact {
-	width: 50%;
-	font-size: 18px;
+down {
+	display: flex;
+	justify-content: center;
+}
+main {
+	width: 70%;
+}
+post {
+	margin-bottom: 10px;
+	border: 1px solid #333333;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+}
+post subtitle {
+	font-size: 24px;
+	margin: 12px;
+}
+post content {
+	font-size: 16px;
+	color: #c8c8c8;
+	margin: 12px;
 }

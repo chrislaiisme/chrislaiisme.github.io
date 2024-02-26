@@ -15,30 +15,44 @@
 </head>
 
 <body>
-	<left></left>
-	<main>
-		<banner>
-			<h1><a href='/'>
+	<banner>
+		<left>
+			<h1 style="margin-right: 5vw;"><a href='/'>
 				chrislaiisme's Blog
 			</a></h1>
-			<div id="fun_fact">
-				Random Fun Fact: <br>
-			</div>
-		</banner>
-		<links>
-			<form action="/About_Me">
-    		<input type="submit" value="About Me">
-			</form>
-			<form action="/My_Templates">
-    		<input type="submit" value="My Templates">
-			</form>
-		</links>
-		<hr>
-		<div>
-			hello, world
+			Chris Lai is me.<br>
+			A coder, a music gamer.
+		</left>
+		<div id="fun_fact">
+			Random Fun Fact: <br>
 		</div>
-	</main>
-	<right></right>
+	</banner>
+	<links>
+		<form action="/Home">
+			<input type="submit" value="Home">
+		</form>
+		<form action="/About_Me">
+			<input type="submit" value="About Me">
+		</form>
+		<form action="/My_Templates">
+			<input type="submit" value="My Templates">
+		</form>
+		<form action="/Fun_Facts">
+			<input type="submit" value="Fun Facts">
+		</form>
+	</links>
+	<hr>
+	<down><main>
+		<h2 style="color: #646464;">New Posts</h2>
+		<post>
+			<subtitle>AAA</subtitle>
+			<content>This is just a regular content</content>
+		</post>
+		<post>
+			<subtitle>BBB</subtitle>
+			<content>This is just another regular content</content>
+		</post>
+	</main></down>
 </body>
 
 <script src="index.js">

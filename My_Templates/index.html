@@ -1,0 +1,458 @@
+<!--
+<!DOCTYPE html>
+-->
+
+<title>
+	My Templates
+</title>
+
+<head>
+	<style>
+		/*PUT CSS HERE*/
+	</style>
+	<meta charset="utf-8">
+	<link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+	<banner>
+		<left>
+			<h1 style="margin-right: 5vw;"><a href='/'>
+				chrislaiisme's Blog
+			</a></h1>
+			templates by chrislaiisme.
+		</left>
+		<div id="fun_fact">
+			Random Fun Fact: <br>
+		</div>
+	</banner>
+	<links>
+		<form action="/index">
+			<input type="submit" value="Home">
+		</form>
+		<form action="/About_Me">
+			<input type="submit" value="About Me">
+		</form>
+		<form action="/My_Templates">
+			<input type="submit" value="My Templates">
+		</form>
+		<form action="/Fun_Facts">
+			<input type="submit" value="Fun Facts">
+		</form>
+	</links>
+	<hr>
+	<main>
+		<div class = "inside">
+			<subtitle>
+				Default Code
+				<button class="btn" id="btn1"> Copy </button>
+			</subtitle>
+			<br>
+			<textarea class="code" id = "code1" readonly>
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#define IO cin.tie(0) -> sync_with_stdio(0)
+#define endl "\n"
+#define F first
+#define S second
+#define X first
+#define Y second
+#define pii pair<int, int>
+#define pLL pair<LL, LL>
+#define mkp make_pair
+#define pb emplace_back
+#define pf emplace_front
+#define ppb pop_back
+#define ppf pop_front
+#define LL loli
+#define loli long long
+#define all(vec) vec.begin(), vec.end()
+using namespace std;
+
+const LL mod = 1e9+7, inf = 4e18, maxN = 0;
+int T = 1;
+
+void solve() {
+	
+}
+
+int main() {
+  // IO;
+  // cin >> T;
+  while(T -- )
+    solve();
+}</textarea>
+		</div>
+				
+		<div class = "inside">
+			<subtitle>
+				LeetCode
+				<button class="btn" id="btn2"> Copy </button>
+				</subtitle>
+			<br>
+			<textarea class="code" id = "code2" readonly>
+#define F first
+#define S second
+#define X first
+#define Y second
+#define pii pair<int, int>
+#define pLL pair<LL, LL>
+#define mkp make_pair
+#define pb emplace_back
+#define pf emplace_front
+#define ppb pop_back
+#define ppf pop_front
+#define LL loli
+#define loli long long
+#define all(vec) vec.begin(), vec.end()
+using namespace std;
+
+const LL mod = 1e9+7, inf = 4e18, maxN = 0;</textarea>
+		</div>
+				
+		<div class = "inside">
+			<subtitle>
+				Generate
+				<button class="btn" id="btn3"> Copy </button>
+			</subtitle>
+			<br>
+			<textarea class="code" id = "code3" readonly>
+#pragma GCC optimize("O2")
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#define IO cin.tie(0) -> sync_with_stdio(0)
+#define endl "\n"
+#define F first
+#define S second
+#define X first
+#define Y second
+#define pii pair<int, int>
+#define pLL pair<LL, LL>
+#define mkp make_pair
+#define pb emplace_back
+#define pf emplace_front
+#define ppb pop_back
+#define ppf pop_front
+#define LL loli
+#define loli long long
+#define all(vec) vec.begin(), vec.end()
+using namespace std;
+
+const LL mod = 1e9+7, inf = 4e18, maxN = 0;
+
+void init();
+
+struct file_name {
+    string in_file, out_file;
+    file_name(string name = "") {
+        in_file = name + ".in";
+        out_file = name + ".out";
+    }
+} File;
+
+struct limits { /*VALUE LIMITS*/
+    struct range {
+        LL mnm, mxm;
+        range(LL _mnm = 0, LL _mxm = 0) {
+            mnm = _mnm;
+            mxm = _mxm;
+        }
+    };
+    range N;
+};
+
+string problem_name = "a001"; /*PROBLEM NAME*/
+constexpr LL number_of_cases = 1; /*NUMBER OF CASES*/
+limits task_limits[number_of_cases];
+vector<LL> skip = {}; /*SKIP TASKS*/
+
+void update_file_name(LL num) {
+    string test_case_number = to_string(num);
+    if(test_case_number.length() == 1)
+        test_case_number = "0" + test_case_number;
+    string name = problem_name + "_" + test_case_number;
+    File = file_name(name);
+}
+
+void generate_infile() {
+    srand(time(0));
+    mt19937 mt(rand());
+    for(LL no = 0; no < number_of_cases; no ++ ) {
+        bool skp = 0;
+        for(auto &i : skip) {
+            if(no == i) {
+                skp = 1;
+                break;
+            }
+        }
+        if(skp)
+            continue;
+        update_file_name(no);
+        freopen(File.in_file.c_str(), "w", stdout);
+
+        cerr << "Generating Task Number " << no << "..." << endl;
+
+        /*ALL DISTRIBUTIONS*/
+
+        #define UID uniform_int_distribution
+        #define lim(X) task_limits[no].X.mnm, task_limits[no].X.mxm
+
+        UID<LL> dis_N(lim(N));
+
+        /*GENERATE INFILE*/
+        
+        
+        
+        /*****************/
+        
+        fclose(stdout);
+    }
+}
+
+void solve() {
+    for(LL no = 0; no < number_of_cases; no ++ ) {
+        bool skp = 0;
+        for(auto &i : skip) {
+            if(no == i) {
+                skp = 1;
+                break;
+            }
+        }
+        if(skp)
+            continue;
+        update_file_name(no);
+        cerr << "Solving Task Number " << no << "..." << endl;
+        freopen(File.in_file.c_str(), "r", stdin);
+        freopen(File.out_file.c_str(), "w", stdout);
+
+        /*SOLVING PROBLEM*/
+        
+        
+        
+        /*****************/
+        
+        fclose(stdin), fclose(stdout);
+    }
+}
+
+int main() {
+    init();
+    cerr << "Initialization Complete" << endl;
+    generate_infile();
+    cerr << "Infile Generation Complete" << endl;
+    solve();
+    cerr << "Task Solving Complete" << endl;
+}
+
+void init() {
+
+    cerr << "Initializing..." << endl;
+
+    /*SETTING RANGES*/
+    #define lims task_limits
+    lims[0] = {{0, 1}};
+}</textarea>
+		</div>
+				
+		<div class = "inside">
+			<subtitle>
+				Generate (Simple)
+				<button class="btn" id="btn4"> Copy </button>
+			</subtitle>
+			<br>
+			<textarea class="code" id = "code4" readonly>
+#pragma GCC optimize("O2")
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#define IO cin.tie(0) -> sync_with_stdio(0)
+#define endl "\n"
+#define F first
+#define S second
+#define X first
+#define Y second
+#define pii pair<int, int>
+#define pLL pair<LL, LL>
+#define mkp make_pair
+#define pb emplace_back
+#define pf emplace_front
+#define ppb pop_back
+#define ppf pop_front
+#define LL loli
+#define loli long long
+#define all(vec) vec.begin(), vec.end()
+#define UID uniform_int_distribution
+using namespace std;
+
+const LL mod = 1e9+7, inf = 4e18, maxN = 0;
+
+int main() {
+    srand(time(0));
+    mt19937 mt(rand());
+    UID<LL> dis_N(0, 1);
+    fstream infile("a001_00.in", ios::out);
+    fstream outfile("a001_00.out", ios::out);
+}</textarea>
+		</div>
+		
+		<div class = "inside">
+			<subtitle>
+				Match
+				<button class="btn" id="btn5"> Copy </button>
+			</subtitle>
+			<br>
+			<textarea class="code" id = "code5" readonly>
+#pragma GCC optimize("O2")
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#define IO cin.tie(0) -> sync_with_stdio(0)
+#define endl "\n"
+#define F first
+#define S second
+#define X first
+#define Y second
+#define pii pair<int, int>
+#define pLL pair<LL, LL>
+#define mkp make_pair
+#define pb emplace_back
+#define pf emplace_front
+#define ppb pop_back
+#define ppf pop_front
+#define LL loli
+#define loli long long
+#define all(vec) vec.begin(), vec.end()
+#define UID uniform_int_distribution
+using namespace std;
+
+const LL mod = 1e9+7, inf = 4e18, maxN = 0;
+
+const LL mod = 1e9 + 7, inf = numeric_limits<LL>::max() / 2;
+
+vector<string> vec, vec2;
+
+void generate_infile() {
+    srand(time(0));
+    mt19937 mt(rand());
+    UID<LL> dis_N(0, 1);
+    fstream cout("input.txt", fstream::out | fstream::trunc);
+
+    /*GENERATE INFILE*/
+
+    
+
+    /*****************/
+}
+
+void solve1() {
+    fstream cin("input.txt"), cout("output.txt", fstream::out | fstream::trunc);
+
+    /*SOLVING PROBLEM*/
+
+
+
+    /****************/
+
+    cout.close();
+    string str;
+    fstream f;
+    f.open("output.txt", fstream::in);
+    while(f >> str)
+        vec.pb(str);
+}
+
+void solve2() {
+    fstream cin("input.txt"), cout("output.txt", fstream::out | fstream::trunc);
+
+    /*SOLVING PROBLEM*/
+
+
+
+    /****************/
+
+    cout.close();
+    string str;
+    fstream f;
+    f.open("output.txt", fstream::in);
+    while(f >> str)
+        vec2.pb(str);
+}
+
+bool match() {
+    if(vec.size() != vec2.size())
+        return 1;
+    for(LL i = 0; i < vec.size(); i ++ ) {
+        if(vec[i] != vec2[i])
+            return 1;
+    }
+    vec.clear(), vec2.clear();
+    return 0;
+}
+
+int main() {
+    LL T = 1;
+    while(T -- ) {
+        generate_infile();
+        solve1();
+        solve2();
+        if(match()) {
+            fstream f("input.txt");
+            cout << "Input: " << endl;
+            string str;
+            while(f >> str) cout << str << " ";
+            cout << endl;
+            cout << "Answer1: " << endl;
+            for(auto &i : vec) cout << i << " ";
+            cout << endl;
+            cout << "Answer2: " << endl;
+            for(auto &i : vec2) cout << i << " ";
+            cout << endl;
+        }
+    }
+}</textarea>
+		</div>
+				
+		<div class = "inside">
+			<subtitle>
+				Special Judge
+				<button class="btn" id="btn6"> Copy </button>
+			</subtitle>
+			<br>
+			<textarea class="code" id = "code6" readonly>
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#define IO cin.tie(0) -> sync_with_stdio(0)
+#define endl "\n"
+#define F first
+#define S second
+#define X first
+#define Y second
+#define pii pair<int, int>
+#define pLL pair<LL, LL>
+#define mkp make_pair
+#define pb emplace_back
+#define pf emplace_front
+#define ppb pop_back
+#define ppf pop_front
+#define LL loli
+#define loli long long
+#define all(vec) vec.begin(), vec.end()
+using namespace std;
+
+const LL mod = 1e9+7, inf = 4e18, maxN = 0;
+
+int main(int argc, char* argv[]) {
+    fstream infile(string(argv[1]).c_str(), ios::in);
+    fstream outfile(string(argv[2]).c_str(), ios::in);
+    fstream ansfile(string(argv[3]).c_str(), ios::in);
+}</textarea>
+		</div>
+	</main>
+</body>
+
+<script src = "index.js">
+	/*PUT JAVASCRIPT HERE*/
+</script>

@@ -7,6 +7,7 @@ textarea {
   resize: none;
 }
 banner {
+	font-size: 16px;
 	height: 100px;
 	display: flex;
 	flex-direction: row;
@@ -19,7 +20,18 @@ banner left {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	font-size: 16px;
+}
+#fun_fact {
+	color: #646464;
+	width: min(max_width, 20%);
+}
+@media (width <= 950px) {
+	banner {
+		font-size: 14px;
+	}
+	banner left h1 {
+		width: 250px;
+	}
 }
 a:link, a:visited, a:hover, a:active {
 	color: #646464;
@@ -52,11 +64,6 @@ hr {
   background-color: #c8c8c8;
   height: 1px;
 }
-#fun_fact {
-	color: #646464;
-	width: 20%;
-	font-size: 18px;
-}
 main {
 	display: flex;
 	justify-content: space-around;
@@ -66,12 +73,16 @@ main {
 	margin: 0px;
 	font-size: 20px;
 	color: #646464;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 subtitle {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	width: 15vw;
 }
 subtitle button {
 	font-size: 16px;

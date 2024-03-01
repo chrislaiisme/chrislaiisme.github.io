@@ -38,7 +38,8 @@ function update_fact() {
 		"少一條腿，你的BMI會降低；但少兩條腿，你的BMI會暴增。",
 		"每個人都踢過孕婦。",
 		"冰箱是櫃子、冰櫃是箱子。",
-		"「拿去」的英文和台語唸起來一樣。"
+		"「拿去」的英文和台語唸起來一樣。",
+		"切一半其實就是切兩半。"
 	];
 	var str = arr[getRandom(0, arr.length)];
 	var ele = document.getElementById("fun_fact");

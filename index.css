@@ -1,59 +1,51 @@
 body {
-	font-family: Consolas, Microsoft JhengHei;
-	display: flex;
-	flex-direction: column;
-	color: #646464;
+  font-family: Consolas, Microsoft JhengHei;
+  display: flex;
+  flex-direction: column;
+  color: #646464;
 }
 banner {
-	font-size: 16px;
-	height: 100px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0vw 2vw 0vw 2vw;
+  font-size: 16px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0vw 2vw 0vw 2vw;
 }
 banner left {
-	color: #646464;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+  color: #646464;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 #fun_fact {
-	color: #646464;
-	width: min(max_width, 20%);
-}
-@media (width <= 1000px) {
-	banner {
-		font-size: 14px;
-	}
-	banner left h1 {
-		width: 250px;
-	}
+  color: #646464;
+  width: min(max_width, 20%);
 }
 a:link, a:visited, a:hover, a:active {
-	color: #646464;
+  color: #646464;
   background-color: transparent;
   text-decoration: none;
 }
 links {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 links input {
-	margin-right: 15px;
-	height: 25px;
-	font-family: Consolas, Microsoft JhengHei;
-	font-size: 18px;
-	background-color: transparent;
-	border: 0px transparent;
-	border-bottom: 2px solid transparent;
-	transition-duration: 0.2s;
-	color: #969696;
+  margin-right: 15px;
+  height: 25px;
+  font-family: Consolas, Microsoft JhengHei;
+  font-size: 18px;
+  background-color: transparent;
+  border: 0px transparent;
+  border-bottom: 2px solid transparent;
+  transition-duration: 0.2s;
+  color: #969696;
 }
 links input:hover {
-	border-bottom: 2px solid #969696;
+  border-bottom: 2px solid #969696;
 }
 hr {
   border: 0px;
@@ -63,29 +55,50 @@ hr {
   height: 1px;
 }
 down {
-	display: flex;
-	margin: 10px;
+  display: flex;
+  margin: 10px;
 }
 down intro {
-	width: 50%;
-	font-size: 18px;
+  width: 35%;
+  font-size: 18px;
 }
 down main {
-	width: 50%;
+  width: 65%;
 }
 post {
-	margin-bottom: 10px;
-	border: 1px solid #333333;
-	height: 100px;
-	display: flex;
-	flex-direction: column;
+  margin-bottom: 10px;
+  border: 1px solid #333333;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
 }
 post subtitle {
-	font-size: 24px;
-	margin: 12px;
+  font-size: 24px;
+  margin: 12px;
 }
 post content {
-	font-size: 16px;
-	color: #c8c8c8;
-	margin: 12px;
+  font-size: 16px;
+  color: #c8c8c8;
+  margin: 12px;
+}
+
+@media (width <= 1100px) {
+  banner {
+    font-size: 14px;
+  }
+  banner left h1 {
+    width: 250px;
+  }
+  down intro {
+    font-size: 14px;
+  }
+  post subtitle {
+    font-size: 18px;
+  }
+  post content {
+    font-size: 12px;
+  }
+  post {
+    height: 80px;
+  }
 }

@@ -3,8 +3,11 @@ body {
   display: flex;
   flex-direction: column;
   color: #646464;
+  margin: 0 10 0 10;
 }
-
+body, html {
+  height: 100%;
+}
 
 banner {
   font-size: 16px;
@@ -33,7 +36,7 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
   border: 0px transparent;
   border-bottom: 2px solid transparent;
-  transition-duration: 0.2s;
+  transition: border-bottom 0.2s;
 }
 a:hover {
   border-bottom: 2px solid #969696;
@@ -51,7 +54,7 @@ links input {
   background-color: transparent;
   border: 0px transparent;
   border-bottom: 2px solid transparent;
-  transition-duration: 0.2s;
+  transition: border-bottom 0.2s;
   color: #969696;
 }
 links input:hover {
@@ -69,32 +72,46 @@ hr {
 
 
 down {
+  height: 80%;
   display: flex;
-  justify-content: center;
+  /*justify-content: right;*/
   margin: 10px;
 }
+
 down left {
-  width: 50%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  border: 0px;
   padding: 0 0 0 2%;
+  border-right: 1px solid #c8c8c8;
 }
 down right {
-  width: 50%;
+  height: 100%;
+  width: 30%;
   padding: 0 0 0 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+down right info {
+  font-size: 18px;
 }
 
 
 post {
   margin-bottom: 20px;
-  /*border: 1px solid #333333;*/
   display: flex;
   align-items: flex-end;
 }
 post subtitle {
+  height: fit-content;
   width: fit-content;
   font-size: 24px;
   margin: 5 5 0 5;
 }
 post content {
+  height: fit-content;
   width: fit-content;
   font-size: 16px;
   color: #969696;
@@ -114,8 +131,5 @@ post content {
   }
   post content {
     font-size: 12px;
-  }
-  post {
-    height: 80px;
   }
 }

@@ -147,4 +147,12 @@ post content {
   down left, down right, down hr {
     width: 100%;
   }
+  down left {
+    border-right: 0px;
+  }
+}
+@media (width <= 450px) {
+  links input {
+    font-size: 4vw;
+  }
 }

@@ -81,7 +81,7 @@ down {
 }
 
 down left {
-  width: 70%;
+  width: 60%;
   display: flex;
   border: 0px;
   padding: 0 0 0 2%;
@@ -89,7 +89,7 @@ down left {
 }
 down right {
   height: 100%;
-  width: 30%;
+  width: 40%;
   padding: 0 0 0 2%;
   display: flex;
   flex-direction: column;
@@ -97,6 +97,9 @@ down right {
 }
 down right info {
   font-size: 18px;
+}
+down hr {
+  width: 0px;
 }
 
 
@@ -131,14 +134,17 @@ post content {
     font-size: 12px;
   }
   down right {
-    width: 330px;
+    width: 440px;
+  }
+  down right info {
+    font-size: 16px;
   }
 }
 @media (width <= 768px) {
   down {
     flex-direction: column;
   }
-  down left, down right {
+  down left, down right, down hr {
     width: 100%;
   }
 }

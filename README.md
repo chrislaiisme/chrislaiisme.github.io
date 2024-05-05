@@ -1,2 +1,2 @@
-# chrislaiisme's blog
+# chrislaiisme's Blog
 just a regular blog

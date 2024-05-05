@@ -4,6 +4,7 @@ function copyText(dom) {
   document.execCommand('copy');
 }
 
+/*
 btn1 = document.querySelector('#btn1');
 code1 = document.querySelector('#code1');
 btn1.addEventListener('click', function() { copyText(code1)});
@@ -27,6 +28,17 @@ btn5.addEventListener('click', function() { copyText(code5)});
 btn6 = document.querySelector('#btn6');
 code6 = document.querySelector('#code6');
 btn6.addEventListener('click', function() { copyText(code6)});
+*/
+
+function init() {
+  btns = document.querySelectorAll(".btn");
+  codes = document.querySelectorAll(".code");
+  strs = ["Default_Code", "LeetCode", "Generate", "Generate_Simple", "Match", "Special_Judge"];
+  for(var i=0; i<codes.length(); i++) {
+    btns[i].addEventListener('click', () => {copyText(codes[i])});
+  }
+}
+
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min) + min);

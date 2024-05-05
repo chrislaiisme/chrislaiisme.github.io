@@ -4,38 +4,32 @@ function copyText(dom) {
   document.execCommand('copy');
 }
 
-/*
-btn1 = document.querySelector('#btn1');
-code1 = document.querySelector('#code1');
-btn1.addEventListener('click', function() { copyText(code1)});
+function setEvent(btn, code) {
+  btn.addEventListener('click', function() {copyText(code);});
+}
 
-btn2 = document.querySelector('#btn2');
-code2 = document.querySelector('#code2');
-btn2.addEventListener('click', function() { copyText(code2)});
-
-btn3 = document.querySelector('#btn3');
-code3 = document.querySelector('#code3');
-btn3.addEventListener('click', function() { copyText(code3)});
-
-btn4 = document.querySelector('#btn4');
-code4 = document.querySelector('#code4');
-btn4.addEventListener('click', function() { copyText(code4)});
-
-btn5 = document.querySelector('#btn5');
-code5 = document.querySelector('#code5');
-btn5.addEventListener('click', function() { copyText(code5)});
-
-btn6 = document.querySelector('#btn6');
-code6 = document.querySelector('#code6');
-btn6.addEventListener('click', function() { copyText(code6)});
-*/
+function setContent(Link, ele) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", Link);
+  xhr.onload = () => {
+    if (xhr.readyState === xhr.DONE) {
+      if (xhr.status === 200) {
+        str = xhr.responseText;
+        ele.innerHTML = str;
+      }
+    }
+  };
+  xhr.send();
+}
 
 function init() {
   btns = document.querySelectorAll(".btn");
   codes = document.querySelectorAll(".code");
   strs = ["Default_Code", "LeetCode", "Generate", "Generate_Simple", "Match", "Special_Judge"];
-  for(var i=0; i<codes.length(); i++) {
-    btns[i].addEventListener('click', () => {copyText(codes[i])});
+  link = "https://raw.githubusercontent.com/chrislaiisme/chrislaiisme.github.io/main/My_Templates/";
+  for(var i=0; i<codes.length; i++) {
+    setEvent(btns[i], codes[i]);
+    setContent(link + strs[i] + ".txt", codes[i]);
   }
 }
 
@@ -64,3 +58,4 @@ update_fact()
 function func() {
 	return "AAA";
 }
+init();

@@ -26,9 +26,13 @@ function init() {
   btns = document.querySelectorAll(".btn");
   codes = document.querySelectorAll(".code");
   strs = ["Default_Code", "LeetCode", "Generate", "Generate_Simple", "Match", "Special_Judge"];
+  headings = [[0, 1], [1], [0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2]];
   link = "https://raw.githubusercontent.com/chrislaiisme/chrislaiisme.github.io/main/My_Templates/";
   for(var i=0; i<codes.length; i++) {
     setEvent(btns[i], codes[i]);
+    for(var j=0; j<headings[i].length; j++) {
+      setContent(link + "Headings" + headings[i][j].toString() + ".txt", codes[i]);
+    }
     setContent(link + strs[i] + ".txt", codes[i]);
   }
 }

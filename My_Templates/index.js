@@ -4,25 +4,30 @@ function copyText(dom) {
   document.execCommand('copy');
 }
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function setEvent(btn, code) {
   btn.addEventListener('click', function() {copyText(code);});
 }
 
-function setContent(Link, ele) {
+function setContent(link, ele) {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", Link);
+  xhr.open("GET", link);
   xhr.onload = () => {
     if (xhr.readyState === xhr.DONE) {
       if (xhr.status === 200) {
         str = xhr.responseText;
-        ele.innerHTML = str;
+        ele.innerHTML += str + "\n";
+        console.log(link);
       }
     }
   };
   xhr.send();
 }
 
-function init() {
+async function init() {
   btns = document.querySelectorAll(".btn");
   codes = document.querySelectorAll(".code");
   strs = ["Default_Code", "LeetCode", "Generate", "Generate_Simple", "Match", "Special_Judge"];
@@ -31,9 +36,12 @@ function init() {
   for(var i=0; i<codes.length; i++) {
     setEvent(btns[i], codes[i]);
     for(var j=0; j<headings[i].length; j++) {
-      setContent(link + "Headings" + headings[i][j].toString() + ".txt", codes[i]);
+      setContent(link + "Heading" + headings[i][j].toString() + ".txt", codes[i]);
+      await sleep(20);
     }
+    codes[i].innerHTML += "\n";
     setContent(link + strs[i] + ".txt", codes[i]);
+    await sleep(20);
   }
 }
 

@@ -7,7 +7,7 @@ void solve() {
 int main() {
   // IO;
   // cin >> TT;
-  for(int case=0; case<TT; case++) {
+  for(int cs=0; cs<TT; cs++) {
     solve();
   }
 }

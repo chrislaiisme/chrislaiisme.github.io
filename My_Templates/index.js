@@ -28,6 +28,7 @@ function setContent(link, ele) {
 }
 
 async function init() {
+  await sleep(20);
   btns = document.querySelectorAll(".btn");
   codes = document.querySelectorAll(".code");
   strs = ["Default_Code", "LeetCode", "Generate", "Generate_Simple", "Match", "Special_Judge"];

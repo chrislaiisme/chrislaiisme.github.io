@@ -12,15 +12,16 @@ function setEvent(btn, code) {
   btn.addEventListener('click', function() {copyText(code);});
 }
 
-function setContent(link, ele) {
+var content = "";
+
+function setContent(link) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", link);
   xhr.onload = () => {
     if (xhr.readyState === xhr.DONE) {
       if (xhr.status === 200) {
-        str = xhr.responseText;
-        ele.innerHTML += str + "\n";
-        console.log(link);
+        var res = xhr.responseText;
+        content += res + "\n";
       }
     }
   };
@@ -28,23 +29,24 @@ function setContent(link, ele) {
 }
 
 async function init() {
+  sleep(1000);
   btns = document.querySelectorAll(".btn");
   codes = document.querySelectorAll(".code");
   strs = ["Default_Code", "LeetCode", "Generate", "Generate_Simple", "Match", "Special_Judge"];
   headings = [[0, 1], [1], [0, 1, 2], [0, 1, 2], [0, 1, 2], [0, 1, 2]];
   link = "https://raw.githubusercontent.com/chrislaiisme/chrislaiisme.github.io/main/My_Templates/";
   for(var i=0; i<codes.length; i++) {
+    content = "";
     setEvent(btns[i], codes[i]);
     for(var j=0; j<headings[i].length; j++) {
-      await sleep(10);
-      setContent(link + "Heading" + headings[i][j].toString() + ".txt", codes[i]);
+      setContent(link + "Heading" + headings[i][j].toString() + ".txt");
       await sleep(10);
     }
+    content += "\n";
     await sleep(10);
-    codes[i].innerHTML += "\n";
+    setContent(link + strs[i] + ".txt");
     await sleep(10);
-    setContent(link + strs[i] + ".txt", codes[i]);
-    await sleep(10);
+    codes[i].innerHTML = content;
   }
 }
 

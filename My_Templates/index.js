@@ -21,7 +21,7 @@ function setContent(link) {
     if (xhr.readyState === xhr.DONE) {
       if (xhr.status === 200) {
         var res = xhr.responseText;
-        content += res + "\n";
+        content += res;
       }
     }
   };
@@ -29,7 +29,6 @@ function setContent(link) {
 }
 
 async function init() {
-  sleep(1000);
   btns = document.querySelectorAll(".btn");
   codes = document.querySelectorAll(".code");
   strs = ["Default_Code", "LeetCode", "Generate", "Generate_Simple", "Match", "Special_Judge"];
@@ -42,7 +41,7 @@ async function init() {
       setContent(link + "Heading" + headings[i][j].toString() + ".txt");
       await sleep(10);
     }
-    content += "\n";
+    content += "\n\n";
     await sleep(10);
     setContent(link + strs[i] + ".txt");
     await sleep(10);

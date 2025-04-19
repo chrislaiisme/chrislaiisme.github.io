@@ -1,5 +1,0 @@
-int main(int argc, char* argv[]) {
-    fstream infile(string(argv[1]).c_str(), ios::in);
-    fstream outfile(string(argv[2]).c_str(), ios::in);
-    fstream ansfile(string(argv[3]).c_str(), ios::in);
-}

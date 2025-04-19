@@ -1,6 +1,0 @@
-#include<iostream>
-#include<math.h>
-#include<algorithm>
-#include<vector>
-#define IO cin.tie(0) -> sync_with_stdio(0)
-#define endl "\n"

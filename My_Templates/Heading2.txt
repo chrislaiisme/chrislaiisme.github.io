@@ -1,2 +1,0 @@
-#pragma GCC optimize("O2")
-#define UID uniform_int_distribution

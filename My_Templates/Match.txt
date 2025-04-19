@@ -1,0 +1,81 @@
+vector<string> vec, vec2;
+
+void generate_infile() {
+    srand(time(0));
+    mt19937 mt(rand());
+    UID<LL> dis_N(0, 1);
+    fstream cout("input.txt", fstream::out | fstream::trunc);
+
+    /*GENERATE INFILE*/
+
+    
+
+    /*****************/
+}
+
+void solve1() {
+    fstream cin("input.txt"), cout("output.txt", fstream::out | fstream::trunc);
+
+    /*SOLVING PROBLEM*/
+
+
+
+    /****************/
+
+    cout.close();
+    string str;
+    fstream f;
+    f.open("output.txt", fstream::in);
+    while(f >> str)
+        vec.pb(str);
+}
+
+void solve2() {
+    fstream cin("input.txt"), cout("output.txt", fstream::out | fstream::trunc);
+
+    /*SOLVING PROBLEM*/
+
+
+
+    /****************/
+
+    cout.close();
+    string str;
+    fstream f;
+    f.open("output.txt", fstream::in);
+    while(f >> str)
+        vec2.pb(str);
+}
+
+bool match() {
+    if(vec.size() != vec2.size())
+        return 1;
+    for(LL i = 0; i < vec.size(); i ++ ) {
+        if(vec[i] != vec2[i])
+            return 1;
+    }
+    vec.clear(), vec2.clear();
+    return 0;
+}
+
+int main() {
+    LL T = 1;
+    while(T -- ) {
+        generate_infile();
+        solve1();
+        solve2();
+        if(match()) {
+            fstream f("input.txt");
+            cout << "Input: " << endl;
+            string str;
+            while(f >> str) cout << str << " ";
+            cout << endl;
+            cout << "Answer1: " << endl;
+            for(auto &i : vec) cout << i << " ";
+            cout << endl;
+            cout << "Answer2: " << endl;
+            for(auto &i : vec2) cout << i << " ";
+            cout << endl;
+        }
+    }
+}

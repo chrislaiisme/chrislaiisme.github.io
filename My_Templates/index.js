@@ -28,7 +28,6 @@ function setContent(link, ele) {
 }
 
 async function init() {
-  await sleep(1000);
   btns = document.querySelectorAll(".btn");
   codes = document.querySelectorAll(".code");
   strs = ["Default_Code", "LeetCode", "Generate", "Generate_Simple", "Match", "Special_Judge"];
@@ -37,10 +36,13 @@ async function init() {
   for(var i=0; i<codes.length; i++) {
     setEvent(btns[i], codes[i]);
     for(var j=0; j<headings[i].length; j++) {
+      await sleep(10);
       setContent(link + "Heading" + headings[i][j].toString() + ".txt", codes[i]);
       await sleep(10);
     }
+    await sleep(10);
     codes[i].innerHTML += "\n";
+    await sleep(10);
     setContent(link + strs[i] + ".txt", codes[i]);
     await sleep(10);
   }

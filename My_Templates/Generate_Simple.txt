@@ -1,0 +1,7 @@
+int main() {
+    srand(time(0));
+    mt19937 mt(rand());
+    UID<LL> dis_N(0, 1);
+    fstream infile("a001_00.in", ios::out);
+    fstream outfile("a001_00.out", ios::out);
+}

@@ -1,0 +1,112 @@
+void init();
+
+struct file_name {
+    string in_file, out_file;
+    file_name(string name = "") {
+        in_file = name + ".in";
+        out_file = name + ".out";
+    }
+} File;
+
+struct limits { /*VALUE LIMITS*/
+    struct range {
+        LL mnm, mxm;
+        range(LL _mnm = 0, LL _mxm = 0) {
+            mnm = _mnm;
+            mxm = _mxm;
+        }
+    };
+    range N;
+};
+
+string problem_name = "a001"; /*PROBLEM NAME*/
+constexpr LL number_of_cases = 1; /*NUMBER OF CASES*/
+limits task_limits[number_of_cases];
+vector<LL> skip = {}; /*SKIP TASKS*/
+
+void update_file_name(LL num) {
+    string test_case_number = to_string(num);
+    if(test_case_number.length() == 1)
+        test_case_number = "0" + test_case_number;
+    string name = problem_name + "_" + test_case_number;
+    File = file_name(name);
+}
+
+void generate_infile() {
+    srand(time(0));
+    mt19937 mt(rand());
+    for(LL no = 0; no < number_of_cases; no ++ ) {
+        bool skp = 0;
+        for(auto &i : skip) {
+            if(no == i) {
+                skp = 1;
+                break;
+            }
+        }
+        if(skp)
+            continue;
+        update_file_name(no);
+        freopen(File.in_file.c_str(), "w", stdout);
+
+        cerr << "Generating Task Number " << no << "..." << endl;
+
+        /*ALL DISTRIBUTIONS*/
+
+        #define UID uniform_int_distribution
+        #define lim(X) task_limits[no].X.mnm, task_limits[no].X.mxm
+
+        UID<LL> dis_N(lim(N));
+
+        /*GENERATE INFILE*/
+        
+        
+        
+        /*****************/
+        
+        fclose(stdout);
+    }
+}
+
+void solve() {
+    for(LL no = 0; no < number_of_cases; no ++ ) {
+        bool skp = 0;
+        for(auto &i : skip) {
+            if(no == i) {
+                skp = 1;
+                break;
+            }
+        }
+        if(skp)
+            continue;
+        update_file_name(no);
+        cerr << "Solving Task Number " << no << "..." << endl;
+        freopen(File.in_file.c_str(), "r", stdin);
+        freopen(File.out_file.c_str(), "w", stdout);
+
+        /*SOLVING PROBLEM*/
+        
+        
+        
+        /*****************/
+        
+        fclose(stdin), fclose(stdout);
+    }
+}
+
+int main() {
+    init();
+    cerr << "Initialization Complete" << endl;
+    generate_infile();
+    cerr << "Infile Generation Complete" << endl;
+    solve();
+    cerr << "Task Solving Complete" << endl;
+}
+
+void init() {
+
+    cerr << "Initializing..." << endl;
+
+    /*SETTING RANGES*/
+    #define lims task_limits
+    lims[0] = {{0, 1}};
+}

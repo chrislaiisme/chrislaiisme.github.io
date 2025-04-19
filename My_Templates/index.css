@@ -1,0 +1,110 @@
+body {
+	font-family: Consolas, Microsoft JhengHei;
+	display: flex;
+	flex-direction: column;
+}
+textarea {
+  resize: none;
+}
+banner {
+	font-size: 16px;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0vw 2vw 0vw 2vw;
+}
+banner left {
+	color: #646464;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#fun_fact {
+	color: #646464;
+	width: min(max_width, 20%);
+}
+@media (width <= 1000px) {
+	banner {
+		font-size: 14px;
+	}
+	banner left h1 {
+		width: 250px;
+	}
+}
+a:link, a:visited, a:hover, a:active {
+	color: #646464;
+  background-color: transparent;
+  text-decoration: none;
+}
+links {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+links input {
+	margin-right: 15px;
+	height: 25px;
+	font-family: Consolas, Microsoft JhengHei;
+	font-size: 18px;
+	background-color: transparent;
+	border: 0px transparent;
+	border-bottom: 2px solid transparent;
+	transition-duration: 0.2s;
+	color: #969696;
+}
+links input:hover {
+	border-bottom: 2px solid #969696;
+}
+hr {
+  border: 0px;
+  display: block;
+  width: 100%;    
+  background-color: #c8c8c8;
+  height: 1px;
+}
+main {
+	display: flex;
+	justify-content: space-around;
+	height: 75vh;
+}
+.inside {
+	margin: 0px;
+	font-size: 20px;
+	color: #646464;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+subtitle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 15vw;
+}
+subtitle button {
+	font-size: 16px;
+	font-family: Consolas;
+	height: 30px;
+	color: #969696;
+	background-color: transparent;
+	border: 0px transparent;
+	border-bottom: 2px solid transparent;
+	transition: 0.2s;
+}
+subtitle button:hover {
+	border-bottom: 2px solid #969696;
+}
+subtitle button:active {
+	transition: 0s;
+	color: #646464;
+	border-bottom: 2px solid #646464;
+}
+.code {
+	width: 15vw;
+	height: 100%;
+	font-size: 14px;
+	font-family: Consolas;
+}

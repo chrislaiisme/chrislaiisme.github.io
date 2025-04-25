@@ -6,4 +6,6 @@
 #define LL loli
 #define loli long long
 using namespace std;
+template<typename T> using Vec = vector<T>;
+template<typename T> using Mat = Vec<Vec<T> >;
 const LL mod = 1e9+7, inf = 4e18, maxN = 0;

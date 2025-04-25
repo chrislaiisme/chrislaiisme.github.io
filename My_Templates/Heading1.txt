@@ -1,15 +1,9 @@
 #define F first
 #define S second
-#define X first
-#define Y second
-#define pii pair<int, int>
 #define pLL pair<LL, LL>
 #define mkp make_pair
 #define pb emplace_back
-#define pf emplace_front
-#define ppb pop_back
-#define ppf pop_front
 #define LL loli
 #define loli long long
 using namespace std;
-const LL mod = 1e9+7, LLinf = 9e18, intinf = 2e9, maxN = 0;
+const LL mod = 1e9+7, inf = 4e18, maxN = 0;

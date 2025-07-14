@@ -2,9 +2,9 @@
 #define S second
 #define pLL pair<LL, LL>
 #define mkp make_pair
-#define pb emplace_back
-#define LL loli
-#define loli long long
+#define pb push_back
+#define LL l0li
+#define l0li long long
 using namespace std;
 template<typename T> using Vec = vector<T>;
 template<typename T> using Mat = Vec<Vec<T> >;

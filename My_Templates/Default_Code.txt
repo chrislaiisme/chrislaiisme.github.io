@@ -1,13 +1,9 @@
-LL Tcs = 1;
-
 void solve() {
   
 }
 
 int main() {
   // IO;
-  // cin >> Tcs;
-  for(int cs=0; cs<Tcs; cs++) {
-    solve();
-  }
+  LL T=1; // cin >> T;
+  for(int t=0; t<T; t++) {solve();}
 }

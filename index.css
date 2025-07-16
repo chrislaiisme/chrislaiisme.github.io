@@ -57,11 +57,11 @@ links input {
   background-color: transparent;
   border: 0px transparent;
   border-bottom: 2px solid transparent;
-  transition: border-bottom 0.2s;
+  transition: border-bottom 0.5s;
   color: #969696;
 }
 links input:hover {
-  border-bottom: 2px solid #969696;
+  border-bottom: 2px solid #969696 ;
 }
 
 
